@@ -12,3 +12,4 @@ C:\Users\sata\Desktop\AAU\tmscore\obj\Debug\net10.0\refint\TmsCore.dll
 C:\Users\sata\Desktop\AAU\tmscore\obj\Debug\net10.0\TmsCore.pdb
 C:\Users\sata\Desktop\AAU\tmscore\obj\Debug\net10.0\TmsCore.genruntimeconfig.cache
 C:\Users\sata\Desktop\AAU\tmscore\obj\Debug\net10.0\ref\TmsCore.dll
+C:\Users\sata\Desktop\AAU\tmscore\obj\Debug\net10.0\TmsCore.sourcelink.json
