@@ -10,7 +10,7 @@ public class EnrollmentService
             throw new ArgumentNullException(nameof(course));
 
         if (course.Capacity <= 0)
-            throw new InvalidOperationException("Course is full.");
+            throw new CapacityReachedException(course.Code);
 
 // TODO 2: Use a switch expression on student.GPA to classify academic standing:
         string standing = student.GPA switch
@@ -29,4 +29,14 @@ public class EnrollmentService
             DateTime.UtcNow
         );
     }
+
+// listener that other modules can attach to
+    public Action<Student>? EnrollmentListener { get; set; }
+
+    public void FinalizeEnrollment(Student s)
+    {
+        Console.WriteLine("Persisting to database...");
+        EnrollmentListener?.Invoke(s);
+    }
+
 }

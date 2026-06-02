@@ -13,14 +13,18 @@ public class Course
     public int Capacity 
     {
         get; 
-        set => field = value > 0 ? value : throw new ArgumentOutOfRangeException(nameof(value), "System constraint: Capacity must be greater than zero."); 
+        set;
     } 
 
-    public int EnrolledCount { 
-        get; 
-        set;
-        
-    } 
+    public int EnrolledCount { get; private set;}
+    public int SeatsAvailable => Capacity - EnrolledCount;
+    public void ReserveSeat()
+    {
+        if (SeatsAvailable <= 0)
+            throw new CapacityReachedException(Code);
+        EnrolledCount++;
+    }
+
 }
 
 public class Student 
@@ -73,4 +77,30 @@ public class LabAssignment : IGradable
     { 
         return (FunctionalityScore * 0.7m) + (CodeQualityScore * 0.3m); 
     }
+}
+
+public class TmsDatabaseException : Exception
+{
+    public string Operation { get; }
+    public TmsDatabaseException(string operation, string message) : base(message)
+    {
+        Operation = operation;
+    }
+    public TmsDatabaseException(string operation, string message, Exception innerException) : base(message, innerException)
+    {
+        Operation = operation;
+    }
+}
+
+public class CapacityReachedException : InvalidOperationException
+{
+    public string CourseCode { get; }
+    public CapacityReachedException(string courseCode) : base($"Course {courseCode} has reached maximum capacity.")
+    {
+        CourseCode = courseCode;
+    }
+    public CapacityReachedException(string courseCode, Exception innerException) : base($"Course {courseCode} has reached maximum capacity.", innerException)
+    {
+        CourseCode = courseCode;
+    }   
 }
