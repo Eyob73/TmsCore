@@ -16,7 +16,11 @@ public class Course
         set => field = value > 0 ? value : throw new ArgumentOutOfRangeException(nameof(value), "System constraint: Capacity must be greater than zero."); 
     } 
 
-    public int EnrolledCount { get; set; } 
+    public int EnrolledCount { 
+        get; 
+        set;
+        
+    } 
 }
 
 public class Student 

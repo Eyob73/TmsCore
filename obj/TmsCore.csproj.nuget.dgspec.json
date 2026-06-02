@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\sata\\Desktop\\AAU\\tmscore\\TmsCore.csproj": {}
+    "C:\\Users\\sata\\Desktop\\AAU\\TmsCore\\TmsCore.csproj": {}
   },
   "projects": {
-    "C:\\Users\\sata\\Desktop\\AAU\\tmscore\\TmsCore.csproj": {
+    "C:\\Users\\sata\\Desktop\\AAU\\TmsCore\\TmsCore.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\sata\\Desktop\\AAU\\tmscore\\TmsCore.csproj",
+        "projectUniqueName": "C:\\Users\\sata\\Desktop\\AAU\\TmsCore\\TmsCore.csproj",
         "projectName": "TmsCore",
-        "projectPath": "C:\\Users\\sata\\Desktop\\AAU\\tmscore\\TmsCore.csproj",
+        "projectPath": "C:\\Users\\sata\\Desktop\\AAU\\TmsCore\\TmsCore.csproj",
         "packagesPath": "C:\\Users\\sata\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\sata\\Desktop\\AAU\\tmscore\\obj\\",
+        "outputPath": "C:\\Users\\sata\\Desktop\\AAU\\TmsCore\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
